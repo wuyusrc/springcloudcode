@@ -1,0 +1,10 @@
+server:
+  #服务提供者端口号
+  port: 40001
+spring:
+  application:
+    name: ServerProvide
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eurekaserver1:30001/eureka/

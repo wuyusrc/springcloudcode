@@ -1,0 +1,17 @@
+server:
+  #注册中心A使用的端口号
+  port: 30001
+eureka:
+  instance:
+    #注册中心A主机地址
+    hostname: eurekaserver1
+  client:
+    #本服务为注册中心，所以不需要向注册中心注册自己
+    register-with-eureka: false
+    #本服务为注册中心，不需要进行检索服务
+    fetch-registry: false
+    service-url:
+      defaultZone: http://eurekaserver2:30002/eureka/
+spring:
+  application:
+    name: eurekaserver1

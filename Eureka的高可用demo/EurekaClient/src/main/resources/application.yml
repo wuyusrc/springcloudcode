@@ -1,0 +1,11 @@
+server:
+  #服务调用者端口号
+  port: 50002
+spring:
+  application:
+    name: ServerClient
+eureka:
+  client:
+    service-url:
+      #将当前服务也注册到注册中心
+      defaultZone: http://eurekaserver1:30001/eureka/
